@@ -5,3 +5,7 @@ script:
   - "npm run lint"
   - "npm test"
   - "npm run build"
+install:
+  - yarn global add firebase-tools
+after_success:
+  - firebase deploy --token=${FIREBASE_API_TOKEN}
