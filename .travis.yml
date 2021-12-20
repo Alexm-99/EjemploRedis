@@ -9,3 +9,6 @@ install:
   - yarn global add firebase-tools
 after_success:
   - firebase deploy --token=${FIREBASE_API_TOKEN}
+branches:
+  only: 
+    - master
